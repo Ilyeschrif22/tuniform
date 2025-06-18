@@ -55,7 +55,7 @@ Welcome to the tuniform project! This is a Next.js application with React, shadc
      ```
    - Open your browser and visit `http://localhost:3000` to see the application.
 
-Happy coding! 🚀
+Here are some Images showcasing the project Interfaces :
 
 ![Image](https://github.com/user-attachments/assets/ce37026f-f079-4842-a4ca-477f020bb5a5)
 
