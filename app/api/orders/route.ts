@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server"
 import mysql, { RowDataPacket, ResultSetHeader } from "mysql2/promise"
 
-// Type guard for MySQL errors
 interface MySQLError extends Error {
   code?: string
   sqlMessage?: string
@@ -14,7 +13,6 @@ const isMySQLError = (error: unknown): error is MySQLError => {
   )
 }
 
-// Define the shape of the order row
 interface OrderRow extends RowDataPacket {
   id: number
   email: string
