@@ -44,7 +44,6 @@ export default function Page() {
     const loadOrders = async () => {
       try {
         const data = await fetchOrders();
-        // Format createdAt to YYYY-MM-DD
         const formattedData = data.map((order: any) => ({
           ...order,
           createdAt: new Date(order.createdAt).toISOString().split("T")[0],
