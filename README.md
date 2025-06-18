@@ -1,41 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tuniform
 
-## Getting Started
+Welcome to the tuniform project! This is a Next.js application with React, shadcn/ui components, and MySQL integration for managing orders. Follow the steps below to set up and run the project locally.
 
-First, run the development server:
+## Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Node.js**: Version 18.x or 20.x (recommended for Next.js 14).
+- **npm**: Included with Node.js, or install pnpm for better performance (`npm install -g pnpm`).
+- **Git**: To clone the repository.
+- **MySQL**: Ensure a local MySQL server is installed and running (e.g., via Homebrew on macOS: `brew install mysql`).
+- **Terminal**: For executing commands.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation Steps
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the Repository**
+   - Clone this repository to your local machine:
+     ```bash
+     git clone https://github.com/Ilyeschrif22/tuniform.git
+     cd tuniform
+     ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Install Dependencies**
+   - Install the required Node.js packages:
+     ```bash
+     npm install
+     ```
+   - Alternatively, use pnpm for faster installation:
+     ```bash
+     pnpm install
+     ```
 
-## Learn More
+3. **Initialize shadcn/ui**
+   - Set up shadcn/ui for custom components (e.g., breadcrumb, table):
+     ```bash
+     npx shadcn-ui@latest init
+     ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Create Environment File**
+   - Create a `.env` file in the project root folder with the following content:
+     ```env
+     MYSQL_HOST=localhost
+     MYSQL_USER=root
+     MYSQL_PASSWORD=
+     MYSQL_PORT=3306
+     ```
+   - Update `MYSQL_PASSWORD` with your MySQL root password if required (leave blank if no password is set).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Import Database**
+   - Import the database schema from `tuniform.sql` into your MySQL server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. **Run the Development Server**
+   - Start the Next.js development server:
+     ```bash
+     npm run dev
+     ```
+   - Open your browser and visit `http://localhost:3000` to see the application.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-"# tuniform" 
+Happy coding! 🚀
 
 ![Image](https://github.com/user-attachments/assets/ce37026f-f079-4842-a4ca-477f020bb5a5)
 
